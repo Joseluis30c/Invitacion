@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale= <link rel="icon" type="image/x-icon" href="favicon.ico">
+ <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Invitación de Cumpleaños</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('fondo.jpg'); /* Usa el nombre exacto de tu imagen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+        }
+        .great-vibes {
+            font-family: 'Great Vibes', cursive;
+        }
+        .card {
+            background: rgba(0, 0, 0, 0.7); /* Fondo oscuro transparente para mejorar legibilidad */
+        }
+        .gift-icon {
+            color: #ff4081; /* Color rosa para el icono de regalo */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+    <div class="text-center p-6 border-2 border-pink-500 rounded-lg shadow-lg card">
+        <h1 class="text-6xl great-vibes text-white">Birthday</h1>
+        <h2 class="text-4xl text-pink-500 mt-4">PARTY</h2>
+        <p class="mt-4 text-lg">¡Acompáñame a celebrar este día tan especial!</p>
+
+        <h3 class="text-7xl great-vibes mt-4">Joselyn</h3>
+        <p class="text-2xl text-pink-500 mt-2">MIS 25 AÑOS</p>
+
+        <div class="mt-8 grid grid-cols-3 gap-4 justify-center items-center">
+            <div class="text-center">
+                <div class="border-t-2 border-pink-500 w-20 mx-auto mb-2"></div>
+                <p class="text-lg font-semibold">MARZO</p>
+                <div class="border-t-2 border-pink-500 w-20 mx-auto mt-2"></div>
+            </div>
+            <div class="text-center">
+                <p class="text-xl font-semibold">SÁBADO</p>
+                <p class="text-6xl font-bold text-white">22</p>
+            </div>
+            <div class="text-center">
+                <div class="border-t-2 border-pink-500 w-20 mx-auto mb-2"></div>
+                <p class="text-lg font-semibold">8:00 PM</p>
+                <div class="border-t-2 border-pink-500 w-20 mx-auto mt-2"></div>
+            </div>
+        </div>
+
+        <p class="mt-6 text-lg font-semibold">DIRECCIÓN DEL LUGAR DEL EVENTO</p>
+        <p class="mt-2">
+            TODOS: <i class="fas fa-gift gift-icon"></i>
+        </p>
+
+        <div class="mt-8 flex flex-wrap justify-center space-x-4">
+            <button onclick="verUbicacion()" class="bg-pink-500 text-white py-2 px-5 rounded-full flex items-center shadow-lg hover:bg-pink-600 transition">
+                <i class="fas fa-map-marker-alt mr-2"></i> MAPA VER UBICACIÓN
+            </button>
+            <button onclick="confirmarAsistencia()" class="bg-pink-500 text-white py-2 px-5 rounded-full flex items-center shadow-lg hover:bg-pink-600 transition">
+                <i class="fab fa-whatsapp mr-2"></i>                CONFIRMAR ASISTENCIA
+            </button>
+        </div>
+
+        <p class="mt-8 text-3xl great-vibes text-pink-400">¡Te espero!</p>
+    </div>
+
+    <script>
+        function verUbicacion() {
+            // Reemplaza con el enlace de Google Maps de la ubicación del evento
+            window.open("https://www.google.com/maps?q=-11.8735085,-77.1116095", "_blank");
+        }
+
+        function confirmarAsistencia() {
+            // Número de WhatsApp al que se enviará el mensaje (cambia el número por el tuyo)
+            var numeroWhatsApp = "51901227358"; 
+            var mensaje = encodeURIComponent("¡Hola! Confirmo mi asistencia a la fiesta de cumpleaños 🎉🥳");
+            window.open("https://wa.me/" + numeroWhatsApp + "?text=" + mensaje, "_blank");
+        }
+    </script>
+
+</body>
+</html>
